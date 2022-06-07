@@ -9,11 +9,12 @@ import styles from './calendar.scss'
 const Calendar = () => {
     moment.updateLocale('en', {week: {dow: 1}})
     const StartDay = moment().startOf('month').startOf('week')
-
+    const Today = moment()
+    
     return(
         <div className="calendar">
             <CalendarHeader/>
-            <CalendarMain/>
+            <CalendarMain Today={Today}/>
             <CalendarGrid StartDay={StartDay}/>
         </div>       
     )
