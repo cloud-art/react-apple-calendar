@@ -1,0 +1,51 @@
+.calendar-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1px;
+    background-color: #404040;
+}
+
+.calendar-cell{
+    background-color: #1E1F21;
+    color: #DDDCDD;
+    min-height: 80px;
+    min-width: 150px;
+}
+
+.calendar-cell-week{
+    min-height: 24px;
+}
+
+.calendar-cell-weekend{
+    background-color: #272829;
+    color: #cecece;
+}
+
+.calendar-cell-anotherMonth{
+    color: #5c5c5c;
+}
+
+.calendar-row{
+    display: flex;
+    padding: 1% 3% 1% 3%;
+    justify-content: flex-end;
+}
+
+.calendar-day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 31px;
+    height: 31px;
+}
+
+.calendar-day-number{
+    height: 100%;
+    width: 100%;
+    background: rgb(235, 59, 59);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
