@@ -1,9 +1,16 @@
-.calendar-grid{
+.calendar-grid-days{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 1px;
+    padding-top: 1px;
     background-color: #404040;
+}
+
+.calendar-grid-week{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
 }
 
 .calendar-cell{
@@ -14,7 +21,10 @@
 }
 
 .calendar-cell-week{
-    min-height: 24px;
+    background-color: #1E1F21;
+    color: #DDDCDD;
+    min-height: 34px;
+    min-width: 150px;
 }
 
 .calendar-cell-weekend{

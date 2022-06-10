@@ -8,14 +8,25 @@ import styles from './calendar.scss'
 
 const Calendar = () => {
     moment.updateLocale('en', {week: {dow: 1}})
-    const StartDay = moment().startOf('month').startOf('week')
-    const Today = moment()
+    const [thisMonth, setThisMonth] = useState(moment());
+    const StartDay = thisMonth.clone().startOf('month').startOf('week')
     
+    const previousMonthHandler = () => {setThisMonth((thisMonth) => thisMonth.clone().subtract(1, 'months'))}
+    const todayMonthHandler = () => {setThisMonth(moment())}
+    const nextMonthHandler = () => {setThisMonth(thisMonth => thisMonth.clone().add(1, 'months'))}
+
+
     return(
         <div className="calendar">
             <CalendarHeader/>
-            <CalendarMain Today={Today}/>
-            <CalendarGrid StartDay={StartDay}/>
+            <CalendarMain 
+                thisMonth={thisMonth}
+                previousMonthHandler={previousMonthHandler}
+                todayMonthHandler={todayMonthHandler}
+                nextMonthHandler={nextMonthHandler}/>
+            <CalendarGrid 
+                StartDay={StartDay}
+                thisMonth={thisMonth}/>
         </div>       
     )
 }

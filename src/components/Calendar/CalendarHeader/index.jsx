@@ -3,7 +3,9 @@ import styles from './CalendarHeader.scss'
 
 const CalendarHeader = () => {
     return(
-        <div>CalendarHeader</div>
+        <div className="calendar-header">
+
+        </div>
     )
 }
 
