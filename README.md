@@ -8,11 +8,11 @@ View of [`this month`]
 
 View of [`next month`]
 
-![Screenshot](images/nextMonth.png.png)
+![Screenshot](images/nextMonth.png)
 
 View of [`previous month`]
 
-![Screenshot](images/previousMonth.png.png)
+![Screenshot](images/previousMonth.png)
 
 Demo
 -
